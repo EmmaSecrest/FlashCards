@@ -29,16 +29,14 @@ export default function NewQuizForm() {
     // create the new quiz here
     dispatch(topicQuizDispatch({id:uuidv4(),name,topicId,cardIds,}));
    
-    alert(cards)
+    
    
-   //fix me
+   
     const cardId = uuidv4;
    cardIds.push(cardId);
+   cards.forEach(card => dispatch(addCards({id:cardId, front: card.front, back: card.back})))
 
-   for (let i of cardIds){
-     dispatch(addCards({id:i, front: cards[i].front, back:cards[i].back}))
-   }
-
+   
   
 
 
