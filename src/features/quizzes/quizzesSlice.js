@@ -33,4 +33,4 @@ const createTopicQuiz = (payload) =>{
 export const topicQuizDispatch = createTopicQuiz;
 export const {addQuiz} = quizSlice.actions;
 export const quizzesReducer = quizSlice.reducer;
-export const selectQuiz = state => state.quizzes.quizzes
+export const selectQuiz = state => state.quizzes

@@ -10,7 +10,7 @@ export default function Topic() {
   //error caused here
   let { quizId } = useParams();
   const quiz = quizzes[quizId];
-   alert(quizzes[quizId]);
+  //  alert(quizId);
   
   
   
