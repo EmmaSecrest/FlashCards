@@ -8,12 +8,12 @@ const quizSlice = createSlice({
     initialState: {quizzes:{}},
     reducers: {
         addQuiz(state,action){
-            const {id,name,topicId,cardsId} = action.payload
+            const {id,name,topicId,cardIds} = action.payload
             state.quizzes[id] = {
                 id: id,
                 name:name,
                 topicId:topicId,
-                cardsId: cardsId
+                cardIds: cardIds
             }
 
         }
@@ -21,11 +21,11 @@ const quizSlice = createSlice({
 })
 // async thunk for dispatching the new quiz
 const createTopicQuiz = (payload) =>{
-    const {id,name,topicId,cardsId} = payload
+    const {id,name,topicId,cardIds} = payload
     
     return (dispatch) => {
         dispatch(addQuizId({topicId}))
-        dispatch(addQuiz({id,name,topicId,cardsId}))
+        dispatch(addQuiz({id,name,topicId,cardIds}))
         
     }
 }
