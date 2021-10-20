@@ -24,8 +24,9 @@ const createTopicQuiz = (payload) =>{
     const {id,name,topicId,cardsId} = payload
     
     return (dispatch) => {
-        dispatch(addQuiz({id,name,topicId,cardsId}))
         dispatch(addQuizId({topicId}))
+        dispatch(addQuiz({id,name,topicId,cardsId}))
+        
     }
 }
 

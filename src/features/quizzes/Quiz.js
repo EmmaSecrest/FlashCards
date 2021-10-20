@@ -3,6 +3,7 @@ import Card from "../cards/Card";
 import ROUTES from "../../app/routes";
 import { selectQuiz } from "./quizzesSlice";
 import { useSelector } from "react-redux";
+import NewQuizForm from "../../components/NewQuizForm";
 
 export default function Topic() {
   const quizzes = useSelector(selectQuiz);
@@ -10,7 +11,7 @@ export default function Topic() {
   //error caused here
   let { quizId } = useParams();
   const quiz = quizzes[quizId];
-  //  alert(quizId);
+  alert(NewQuizForm.cardIds)
   
   
   
